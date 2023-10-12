@@ -3,7 +3,7 @@ import pywhatkit as kit
 from datetime import datetime
 
 # Load your dataset (assuming it's a CSV file)
-df = pd.read_csv('/home/libra/PycharmProjects/pythonProject/data/your_dataset.csv')
+df = pd.read_csv('/data/sample_data.csv')
 
 # Define a dictionary to keep track of which numbers have already received a message
 sent_messages = {}
@@ -14,7 +14,7 @@ for index, row in df.iterrows():
     message = row['Message']
 
     # Add the country code to the number (e.g., +1 for the United States)
-    country_code = '+62'  # Modify this according to your needs
+    country_code = '+1'  # Modify this according to your needs
     number = country_code + str(row['WhatsAppNumber'])
 
     # Check if the number has already received a message
